@@ -10,8 +10,6 @@ package com.sqa.mr.auto;
 import org.apache.log4j.*;
 import org.openqa.selenium.*;
 
-import com.sqa.mr.adactin.*;
-
 /**
  * Core //ADDD (description of class)
  * <p>
@@ -67,6 +65,10 @@ public class Core {
 	 */
 	public Logger getLog() {
 		return this.log;
+	}
+
+	public String getProp(String propName) {
+		return AutoBasics.getProp(propName, "src/main/resources/", "config.properties", getLog());
 	}
 
 	/**
